@@ -12,6 +12,7 @@ function bannerSlide() {
         pointThree.classList.remove('point-active')
         slider.setAttribute('style', 'margin-left: 0; transition: margin 300ms linear')
     })
+
     pointTwo.addEventListener('click', () => {
         pointTwo.classList.add('point-active')
         pointOne.classList.remove('point-active')
