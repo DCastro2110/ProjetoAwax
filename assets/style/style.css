@@ -146,7 +146,7 @@ header {
     border-radius: 50%;
     cursor: pointer 
 }
-.points.active {
+.point-active {
     background-color: var(--beige-color);
 }
 .points:hover {
