@@ -1,2 +1,6 @@
-# ProjetoAwax
- Projeto feito com o auxílio  do curso B7Web
+# Projeto Awax
+ Projeto feito com o auxílio do Curso **B7Web** \
+ Contém modificações próprias minhas \
+ Créditos: [Alex Bukin](https://www.behance.net/bagd)
+ 
+ 
