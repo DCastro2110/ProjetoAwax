@@ -11,7 +11,12 @@ function bannerSlide() {
         pointTwo.classList.remove('point-active')
         pointThree.classList.remove('point-active')
         
-        slider.setAttribute('style', 'margin-left: 0; transition: margin 300ms linear')
+        if (slider.style.marginLeft === '-200vw') {
+            slider.setAttribute('style', 'margin-left: 0vw; transition: margin 600ms linear')
+            return
+        } 
+        
+        slider.setAttribute('style', 'margin-left: 0vw; transition: margin 300ms linear')
     })
 
     pointTwo.addEventListener('click', () => {
@@ -26,8 +31,15 @@ function bannerSlide() {
         pointOne.classList.remove('point-active')
         pointTwo.classList.remove('point-active')
         
+        if (slider.style.marginLeft === '0vw') {
+            slider.setAttribute('style', 'margin-left: -200vw; transition: margin 600ms linear')
+            return
+        } 
+        
         slider.setAttribute('style', 'margin-left: -200vw; transition: margin 300ms linear')
     })
+
+    
 }
 
 bannerSlide()
