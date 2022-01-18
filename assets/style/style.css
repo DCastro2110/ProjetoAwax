@@ -19,6 +19,8 @@ html {
 .container {
     max-width: 114rem;
     height: 100%;
+    margin: 0 auto;
+    display: flex;
 }
 
 header {
@@ -27,8 +29,6 @@ header {
     background-color: var(--black-color);
 }
 .header-container {
-    margin: 0 auto;
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -64,3 +64,94 @@ header {
     color: var(--grey-color);
     border-bottom: 0.5rem solid var(--beige-color);
 }
+
+
+.banner {
+    width: 100vw;
+    height: calc(100vh - 10rem);
+    background-color: #333;
+    background-image: url(../images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.banner .sliders {
+    height: 100%;
+    width: 300vw;
+    display: flex;
+}
+
+.banner .slide {
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.banner .slide-area {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .slide-area h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.title-two {
+    color: var(--beige-color) !important;
+    margin-top: -1.5rem;
+}
+
+.banner .slide-area h2 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: var(--white-color);
+}
+
+.banner .slide-area button {
+    margin-top: 8rem;
+    color: var(--white-color);
+    background-color: var(--beige-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3rem;
+    transition: transform 150ms linear;
+}
+.banner .slide-area button:hover {
+    transform: scale(1.1);
+}
+
+.slider-pointers {
+    width: 100%;
+    height: 2rem;
+    margin-top: -4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.points {
+    width: 1.3rem;
+    margin-right: 0.5rem;
+    height: 1.3rem;
+    border: 0.2rem solid var(--beige-color);
+    border-radius: 50%;
+    cursor: pointer 
+}
+.point-active {
+    background-color: var(--beige-color);
+    width: 1.6rem;
+    height: 1.6rem;
+}
+.points:hover {
+    transform: scale(1.1)
+}
+
