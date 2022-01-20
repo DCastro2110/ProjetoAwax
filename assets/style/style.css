@@ -48,6 +48,7 @@ header {
 }
 .menu-list li {
     list-style-type: none;
+    flex: 1;
 }
 .menu-list li a {
     display: flex;
@@ -119,7 +120,7 @@ header {
     color: var(--white-color);
 }
 
-.banner .slide-area button {
+.button {
     margin-top: 8rem;
     color: var(--white-color);
     background-color: var(--beige-color);
@@ -130,8 +131,11 @@ header {
     border: none;
     border-radius: 3rem;
     transition: transform 150ms linear;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
 }
-.banner .slide-area button:hover {
+.button:hover {
     transform: scale(1.1);
 }
 
@@ -206,13 +210,150 @@ header {
 
 
 /* CSS de áreas específicas */
+/* About Us */
 
 .section-aboutus {
     display: flex;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 .section-aboutus-left {
-    flex: 1;
+    flex: 3;
+}
+.section-aboutus-left p {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
 }
 .section-aboutus-right {
-    width: 50rem;
+    flex: 2;
+    text-align: center;
+    margin-left: 1rem;
+}
+.section-aboutus-right img {
+    width: 100%;
+    box-shadow: 0 0.5rem 1rem;
+}
+
+
+
+
+/* Services */
+
+.section-services {
+    display: flex;
+    margin:0 auto;
+    width: 100%;
+}
+.service {
+    flex: 1;
+    text-align: center;
+    border-right: 0.1rem solid #333;
+    padding: 1.5rem
+}
+.service:nth-child(1){
+    border-left: 0.1rem solid #333;
+}
+.service h4 {
+    text-transform: uppercase;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+}
+.service p {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: #999;
+}
+
+
+
+
+/* Projects */
+
+.section-projects {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+     align-items: center;
+}
+.projects-filter {
+    margin: 0 auto;
+    display: inline-block;
+    height: 5rem;
+    background-color: #ededed;
+    border-radius: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.projects-filter ul {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.projects-filter ul li {
+    display: inline-block;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 1rem;
+    font-size: 1.3rem;
+    border-left: 0.1rem solid #cfcfcf;
+    border-bottom: 0.5rem solid var(--transparent-color);
+    transition: border-bottom 150ms linear;
+    cursor: pointer;
+
+}
+.projects-filter ul li:first-child {
+    border-left: none;
+}
+.projects-filter ul li:hover,
+.projects-filter ul li.active {
+    border-bottom: 0.5rem solid var(--beige-color);
+}
+
+
+.projects-images {
+    width: 100vw;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.projects-photo {
+    width: 28rem;
+}
+.projects-photo .projects-photoarea {
+    width: 26rem;
+    height: 16rem;
+    margin: 1rem;
+}
+.projects-photoarea img {
+    width: inherit;
+    height: inherit;
+}
+.projects-photoinfo {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.projects-photoinfo h5 {
+    font-size: 1.6rem;
+}
+.projects-photoinfo p {
+    font-size: 1.2rem;
+}
+.projects-photo:hover .projects-photoinfo {
+    display: flex;
 }
