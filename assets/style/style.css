@@ -19,7 +19,7 @@ html {
     font-size: 62.5%;
 }
 body {
-
+    overflow-x: hidden;
 }
 .container {
     max-width: 114rem;
@@ -82,7 +82,7 @@ header {
     overflow-x: hidden;
 }
 
-.banner .sliders {
+.banner .sliders, .sliders-team {
     height: 100%;
     width: 300vw;
     display: flex;
@@ -155,7 +155,7 @@ header {
     border-radius: 50%;
     cursor: pointer 
 }
-.point-active {
+.point-active, .point-active-team {
     background-color: var(--beige-color);
     width: 1.6rem;
     height: 1.6rem;
@@ -364,17 +364,15 @@ header {
 /* OUR TEAM */
 
 .team-photos {
-    margin: 0 auto;
     width: 100vw;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 2rem    
+    gap: 2rem;
 }
 .person-team-photo {
     background-color: var(--white-color);
-    min-width: 35rem;
+    min-width: 28rem;
     max-width: 40rem;
     height: 43rem;
     padding: 4.6rem;
@@ -447,7 +445,4 @@ header {
 .section-body.sliders {
     width: 300vw;
     display: flex;
-}
-.team-photos.slide {
-    width: 100%;
 }
