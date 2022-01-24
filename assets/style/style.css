@@ -18,9 +18,7 @@
 html {
     font-size: 62.5%;
 }
-body {
-    overflow-x: hidden;
-}
+
 .container {
     max-width: 114rem;
     height: 100%;
@@ -73,7 +71,7 @@ header {
 
 
 .banner {
-    width: 100vw;
+    width: 100%;
     height: calc(100vh - 10rem);
     background-color: #333;
     background-image: url(../images/bg.jpg);
@@ -82,7 +80,7 @@ header {
     overflow-x: hidden;
 }
 
-.banner .sliders, .sliders-team {
+.banner .sliders{
     height: 100%;
     width: 300vw;
     display: flex;
@@ -135,30 +133,30 @@ header {
     display: inline-block;
     text-decoration: none;
 }
-.button:hover {
+.button:hover, .button-price:hover {
     transform: scale(1.1);
 }
 
 .slider-pointers {
     width: 100%;
-    height: 2rem;
-    margin-top: -4rem;
+    height: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.banner .slider-pointers {
+    margin-top: -4rem;
+}
 .points {
-    width: 1.3rem;
+    width: 1.1rem;
     margin-right: 0.5rem;
-    height: 1.3rem;
+    height: 1.1rem;
     border: 0.2rem solid var(--beige-color);
     border-radius: 50%;
     cursor: pointer 
 }
-.point-active, .point-active-team {
+.point-active, .point-active-team, .point-active-client, .point-active-premium {
     background-color: var(--beige-color);
-    width: 1.6rem;
-    height: 1.6rem;
 }
 .points:hover {
     transform: scale(1.1)
@@ -193,12 +191,21 @@ header {
 }
 .default .section-body {
     margin: 0 auto;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 .default.light {
     background-color: var(--light-bg);
 }
 .default.dark {
     background-color: var(--black-color);
+}
+.white-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: var(--white-color);
+    border-top: 0.2rem solid #ccc;
+    border-bottom: 0.2rem solid #ccc;
 }
 
 
@@ -364,18 +371,20 @@ header {
 /* OUR TEAM */
 
 .team-photos {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 .person-team-photo {
     background-color: var(--white-color);
     min-width: 28rem;
     max-width: 40rem;
     height: 43rem;
-    padding: 4.6rem;
+    padding: 4.6rem 2.3rem;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -404,16 +413,17 @@ header {
     justify-content: center;
     align-items: center;
     gap: 0.4rem;
+    width: 100%;
 }
 .person-team-photo .social-media-person span {
+    border-radius: 50%;
     width: 4rem;
     height: 4rem;
-    border-radius: 50%;
     background-color: #ccc;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
     cursor: pointer;
 }
 .person-team-photo .social-media-person span img {
@@ -440,9 +450,185 @@ header {
     background-color: var(--opacity-color);
 }
 .our-team-background .slider-pointers {
-    margin-top: 5rem;
+   margin-top: 5rem;
 }
-.section-body.sliders {
-    width: 300vw;
+
+
+
+
+/* Clients */
+  
+.clients-slider {
+   width: 100%;
+
+}
+.clients {
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto
+}
+.clients img {
+    width: 15rem;
+    height: 16rem;
+    margin-bottom: 3.5rem;
+}
+.clients h5 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+.clients h6 {
+    font-size: 1.4rem;
+    color: var(--grey-color);
+    margin-bottom: 3rem;
+}
+.clients span img {
+    height: 2rem;
+    width: 2.5rem;
+}
+.clients p {
+    font-size: 1.4rem;
+    max-width: 75rem;
+    text-align: center;
+}
+.section-clients .slider-pointers {
+    margin-top: 5rem;
+    margin-bottom: 0;
+}
+
+
+
+/* Branding */
+
+.branding-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.branding-section img {
+    object-fit: contain;
+}
+
+
+
+
+/* Price */
+
+.section-price {
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+.price {
+    padding-top: 3rem;
+    padding-bottom: 3rem; 
+    min-width: 25.5rem;
+    max-width: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white-color);
+    flex: 1;
+}
+.price h6 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+.price em {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+.price p {
+    text-transform: uppercase;
+    color: var(--grey-color);
+    margin-bottom: 2rem;
+}
+.price ul {
+    list-style-type: none;
+    text-align: center;
+}
+.price ul li {
+    height: 3rem;
+}
+.price ul li span {
+    position: relative;
+    font-weight: bold;
+}
+.button-price {
+    margin-top: 2rem;
+    padding: 1.5rem 3.5rem;
+    background-color: #333;
+    font-size: 1.6rem;
+    color: var(--white-color);
+    text-decoration: none;  
+    border-radius: 5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: transform 150ms linear;
+}
+.button-price-premium {
+    background-color: var(--beige-color);
+}
+
+
+
+
+/* Premium */
+
+.default.light.white-section {
+    background-color: var(--white-color);
+}
+.premium-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+.premium-slide img {
+    object-fit: contain;
+}
+.features {
+    margin-bottom: 5rem;
+}
+.premium-info h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: var(--black-color);
+}
+.premium-info {
+    color: var(--grey-color);
+    font-size: 1.2rem;
+}
+.premium-info span {
+    float: left;
+}
+.premium-info span img {
+    transform: scale(0.8);
+}
+.text-premium-slide {
+    margin-left: 4rem;
+}
+.text-premium-slide ul {
+    list-style: inside square;
+    text-transform: uppercase;
+}
+
+.features p, .features h3{
+    margin-left: 4rem;
+}
+.features:first-child p, .features:first-child h3 {
+    margin-left: 0;
 }
