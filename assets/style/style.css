@@ -21,105 +21,15 @@ html {
     font-size: 62.5%;
 }
 
+
+/* Default */
+
 .container {
     max-width: 114rem;
     height: 100%;
     margin: 0 auto;
     display: flex;
 }
-
-header {
-    height: 10rem;
-    width: 100%;
-    background-color: var(--black-color);
-}
-.header-container {
-    justify-content: space-between;
-    align-items: center;
-}
-.header-container img {
-    height: 100%;
-}
-.menu-list {
-    color: var(--white-color);
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-}
-.menu-list li {
-    list-style-type: none;
-    flex: 1;
-}
-.menu-list li a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--white-color);
-    text-decoration: none;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    word-spacing: 0.1rem;
-    font-weight: 600;
-    height: 10rem;
-    padding: 1rem;
-    border-bottom: 0.5rem solid var(--transparent-color);
-    transition: border 150ms linear;
-    cursor: pointer;
-}
-.menu-list li a:hover {
-    color: var(--grey-color);
-    border-bottom: 0.5rem solid var(--beige-color);
-}
-
-
-.banner {
-    width: 100%;
-    height: calc(100vh - 10rem);
-    background-color: #333;
-    background-image: url(../images/bg.jpg);
-    background-position: center;
-    background-size: cover;
-    overflow-x: hidden;
-}
-
-.banner .sliders{
-    height: 100%;
-    width: 300vw;
-    display: flex;
-}
-
-.banner .slide {
-    height: 100%;
-    width: 100vw;
-    background-color: var(--opacity-color)
-}
-
-.banner .slide-area {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.banner .slide-area h1 {
-    font-size: 5rem;
-    text-transform: uppercase;
-    color: white;
-}
-
-.title-two {
-    color: var(--beige-color) !important;
-    margin-top: -1.5rem;
-}
-
-.banner .slide-area h2 {
-    text-transform: uppercase;
-    font-size: 2.5rem;
-    color: var(--white-color);
-}
-
 .button {
     margin-top: 8rem;
     color: var(--white-color);
@@ -214,6 +124,106 @@ header {
 
 
 
+/* Header */ 
+
+
+
+header {
+    height: 10rem;
+    width: 100%;
+    background-color: var(--black-color);
+}
+.header-container {
+    justify-content: space-between;
+    align-items: center;
+}
+.header-container img {
+    height: 100%;
+}
+.menu-list {
+    color: var(--white-color);
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+.menu-list li {
+    list-style-type: none;
+    flex: 1;
+}
+.menu-list li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    word-spacing: 0.1rem;
+    font-weight: 600;
+    height: 10rem;
+    padding: 1rem;
+    border-bottom: 0.5rem solid var(--transparent-color);
+    transition: border 150ms linear;
+    cursor: pointer;
+}
+.menu-list li a:hover {
+    color: var(--grey-color);
+    border-bottom: 0.5rem solid var(--beige-color);
+}
+
+
+
+
+/* Banner */
+
+
+.banner {
+    width: 100%;
+    height: calc(100vh - 10rem);
+    background-color: #333;
+    background-image: url(../images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.banner .sliders{
+    height: 100%;
+    width: 300vw;
+    display: flex;
+}
+
+.banner .slide {
+    height: 100%;
+    width: 100vw;
+    background-color: var(--opacity-color)
+}
+
+.banner .slide-area {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .slide-area h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.title-two {
+    color: var(--beige-color) !important;
+    margin-top: -1.5rem;
+}
+
+.banner .slide-area h2 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: var(--white-color);
+}
 
 
 
@@ -374,82 +384,30 @@ header {
 
 /* Our Team */
 
-.team-photos {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-}
-.person-team-photo {
-    background-color: var(--white-color);
-    min-width: 28rem;
-    max-width: 40rem;
-    height: 43rem;
-    padding: 4.6rem 2.3rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-.person-team-photo .person-photo {
-    width: 18rem;
-    height: 18rem;
-    margin-bottom: 4.5rem;
-}
-.person-team-photo h5 {
-    color: black;
-    font-size: 2.1rem;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-}
-.person-team-photo h6 {
-    color: var(--grey-color);
-    font-size:1.4rem ;
-    font-weight: 500;
-}
-.person-team-photo .social-media-person {
-    margin-top: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.4rem;
-    width: 100%;
-}
-.person-team-photo .social-media-person span {
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background-color: #ccc;
-    cursor: pointer;
-}
-
-.person-team-photo .social-media-person span:hover {
-    background-color: var(--beige-color);
-}
-.person-team-photo .social-media-person span:nth-child(4) img{
-    width: 30%;
-}
-.default.dark.section-our-team {
+.section-our-team {
     background-image: url(../images/bg2.jpg);
     background-position: center;
     background-size: cover;
     padding: 0;
 }
 .our-team-background {
-    width: 100%;
-    height: 100%;
-    padding: 5rem 5rem;
     background-color: var(--opacity-color);
+    padding: 5rem 0;
 }
-.our-team-background .slider-pointers {
-   margin-top: 5rem;
+.our-team-background .sliders {
+    width: 300vw;
+    display: flex;
+    gap: 2rem;
+}
+.our-team-background .slide {
+    min-height: 30rem;
+    width: 28rem;
+    background-color: white;
+}
+.our-team-background .section-body {
+    margin: 0 auto;
+    overflow-x: hidden;
+    max-width: 88rem;
 }
 
 
