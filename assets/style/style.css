@@ -374,3 +374,14 @@ header {
 
 /* Our Team */
 
+.bg-team {
+    background-image: url(../images/bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+}
+.section-team-area {
+    background-color: var(--opacity-color);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
