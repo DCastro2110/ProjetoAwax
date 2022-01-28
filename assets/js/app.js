@@ -1,21 +1,49 @@
-function menuButton() {
+function menu() {
     const nav = document.querySelector('nav')
     const button = document.querySelector('.menu-button')
-    let num = 0
-
+    const li = document.querySelectorAll('.menu-list li')
+    let displayStyleNone = true
+    let maxWidth = window.matchMedia("(max-width: 767.98px)") 
+    
     button.addEventListener('click', () => {
-        if (num === 0) {
+        if (displayStyleNone === true) {
             nav.style.display = 'flex'
+            document.body.style.overflow = 'hidden'
            
-            num = 1
-        } else if (num === 1) {
+            displayStyleNone = false
+        } else {
             nav.style.display = 'none'
             document.body.style.overflow = 'auto'
-            num = 0
+            displayStyleNone = true
         }
     })
+    
+    setInterval(() => {
+        if (!maxWidth.matches) {
+            nav.style.display = 'flex' 
+        } else {
+            if (displayStyleNone === true) {
+                nav.style.display = 'none'     
+            } else {
+                nav.style.display = 'flex'
+            }
+        }
+    }, 0)
+    
+    if (maxWidth.matches) {
+        for (let i = 0; i <= li.length; i++) {
+            li[i].addEventListener('click', () => {
+                nav.style.display = 'none'
+                document.body.style.overflow = 'auto'
+                displayStyleNone = true
+            })
+        }
+    }
+
 }
-menuButton()
+
+menu()
+
 function bannerSlide() {
 
     const pointOne = document.querySelector('.point-one')
@@ -61,4 +89,3 @@ function bannerSlide() {
 }
 
 bannerSlide()
-
