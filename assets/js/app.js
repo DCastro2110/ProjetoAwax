@@ -1,3 +1,21 @@
+function menuButton() {
+    const nav = document.querySelector('nav')
+    const button = document.querySelector('.menu-button')
+    let num = 0
+
+    button.addEventListener('click', () => {
+        if (num === 0) {
+            nav.style.display = 'flex'
+           
+            num = 1
+        } else if (num === 1) {
+            nav.style.display = 'none'
+            document.body.style.overflow = 'auto'
+            num = 0
+        }
+    })
+}
+menuButton()
 function bannerSlide() {
 
     const pointOne = document.querySelector('.point-one')
