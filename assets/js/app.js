@@ -1,3 +1,49 @@
+function menu() {
+    const nav = document.querySelector('nav')
+    const button = document.querySelector('.menu-button')
+    const li = document.querySelectorAll('.menu-list li')
+    let displayStyleNone = true
+    let maxWidth = window.matchMedia("(max-width: 767.98px)") 
+    
+    button.addEventListener('click', () => {
+        if (displayStyleNone === true) {
+            nav.style.display = 'flex'
+            document.body.style.overflow = 'hidden'
+           
+            displayStyleNone = false
+        } else {
+            nav.style.display = 'none'
+            document.body.style.overflow = 'auto'
+            displayStyleNone = true
+        }
+    })
+    
+    setInterval(() => {
+        if (!maxWidth.matches) {
+            nav.style.display = 'flex' 
+        } else {
+            if (displayStyleNone === true) {
+                nav.style.display = 'none'     
+            } else {
+                nav.style.display = 'flex'
+            }
+        }
+    }, 0)
+    
+    if (maxWidth.matches) {
+        for (let i = 0; i <= li.length; i++) {
+            li[i].addEventListener('click', () => {
+                nav.style.display = 'none'
+                document.body.style.overflow = 'auto'
+                displayStyleNone = true
+            })
+        }
+    }
+
+}
+
+menu()
+
 function bannerSlide() {
 
     const pointOne = document.querySelector('.point-one')
@@ -43,4 +89,3 @@ function bannerSlide() {
 }
 
 bannerSlide()
-
